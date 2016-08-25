@@ -1,0 +1,279 @@
+
+.ui_form {
+    color: #555;
+    font-size: 14px;
+}
+.ui_form label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+.ui_form input, .ui_form select, .ui_form textarea {
+}
+.ui_form h2 {
+    border-bottom: 1px solid #e5e5e5;
+    color: #333333;
+    display: block;
+    font-size: 18px;
+    line-height: 40px;
+    margin-bottom: 20px;
+    padding: 0;
+    width: 100%;
+}
+.ui_form .ui_table th, .ui_form .ui_table td {
+}
+.ui_form .ui_form_style02 th {
+    background: #fff none repeat scroll 0 0;
+    font-weight: normal;
+    padding-right: 15px;
+    text-align: right;
+}
+.inline {
+    display: inline-block !important;
+    margin-bottom: 0 !important;
+    vertical-align: middle;
+}
+.radio input, .checkbox input {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 0 none;
+}
+.radio, .checkbox {
+    margin-right: 15px;
+}
+.ui_form_h .help_block {
+    margin-bottom: 0;
+}
+.ui_form_inline {
+    display: inline-block;
+    margin-left: 3px;
+    vertical-align: middle;
+}
+.ui_form_inline .ui_btn {
+    vertical-align: bottom;
+}
+.ui_form_inline label {
+    color: #555;
+    font-size: 13px;
+    margin: 0 3px 0 5px;
+    vertical-align: baseline;
+}
+.ui_form_inline .simple_query {
+    display: inline-block;
+    margin: 0 3px;
+}
+.ui_form_inline .l-text {
+    margin-top: 3px;
+}
+.help_block, .help_inline {
+    color: #666;
+    font-size: 12px !important;
+}
+.help_block {
+    display: block;
+    margin-bottom: 9px;
+}
+.help_inline {
+    display: inline-block;
+    padding-left: 5px;
+    vertical-align: middle;
+}
+.ui_form .ui_form_actions {
+    padding-left: 145px;
+}
+.ui_form_actions {
+    background-color: #f5f5f5;
+    border-top: 1px solid #e5e5e5;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 19px 20px 20px;
+}
+.ui_form_actions .ui_btn {
+}
+.uneditable_input {
+    background-color: #fff;
+    border-color: #eeeeee;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.024) inset;
+    cursor: not-allowed;
+    display: block;
+}
+.uneditable_input {
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    color: #555555;
+    display: inline-block;
+    font-size: 13px;
+    height: 18px;
+    line-height: 18px;
+    margin-bottom: 9px;
+    padding: 4px;
+    width: 210px;
+}
+.uneditable_textarea {
+    height: auto;
+    width: auto;
+}
+.disabled, .readonly {
+    background-color: #eee;
+    background-image: none;
+    border-color: #ddd;
+    color: #555 !important;
+    cursor: not-allowed;
+}
+.focused {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: rgba(82, 168, 236, 0.8) !important;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(82, 168, 236, 0.6) !important;
+    outline: 0 none !important;
+}
+.input_append, .input_prepend {
+    font-size: 0;
+    margin-bottom: 5px;
+    white-space: nowrap;
+}
+.input_append input, .input_prepend input, .input_append select, .input_prepend select, .input_append.uneditable_input, .input_prepend.uneditable_input {
+    border-radius: 0 3px 3px 0;
+    font-size: 14px;
+    margin-bottom: 0;
+    vertical-align: top;
+}
+.input_append input:focus, .input_prepend input:focus, .input_append select:focus, .input_prepend select:focus, .input_append .uneditable_input:focus, .input_prepend .uneditable_input:focus {
+    z-index: 2;
+}
+.input_append .add_on, .input_prepend .add_on {
+    background-color: #eeeeee;
+    border: 1px solid #cccccc;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    height: 20px;
+    line-height: 20px;
+    min-width: 16px;
+    padding: 4px 5px;
+    text-align: center;
+    text-shadow: 0 1px 0 #ffffff;
+    width: auto;
+}
+.input_append .add_on, .input_prepend .add_on, .input_append .btn, .input_prepend .btn {
+    border-radius: 0;
+    vertical-align: top;
+}
+.input_append .active, .input_prepend .active {
+    background-color: #a9dba9;
+    border-color: #46a546;
+}
+.input_prepend .add_on, .input_prepend .btn {
+    margin-right: -1px;
+}
+.input_prepend .add_on:first-child, .input_prepend .btn:first-child {
+    border-radius: 3px 0 0 3px;
+}
+.input_append input, .input_append select, .input_append .uneditable_input {
+    border-radius: 3px 0 0 3px;
+}
+.input_append .add_on, .input_append .btn {
+    margin-left: -1px;
+}
+.input_append .add_on:last-child, .input_append .btn:last-child {
+    border-radius: 0 3px 3px 0;
+}
+.input_prepend.input_append input, .input_prepend.input_append select, .input_prepend.input_append .uneditable_input {
+    border-radius: 0;
+}
+.input_prepend.input_append .add_on:first-child, .input_prepend.input_append .btn:first-child {
+    border-radius: 3px 0 0 3px;
+    margin-right: -1px;
+}
+.input_prepend.input_append .add_on:last-child, .input_prepend.input_append .btn:last-child {
+    border-radius: 0 3px 3px 0;
+    margin-left: -1px;
+}
+.ui_navbar .ui_search {
+    margin: 2px 20px 0 0;
+}
+.ui_toolbar .ui_search {
+    margin: 0 10px;
+}
+.ui_search {
+    display: inline-block;
+    vertical-align: middle;
+}
+.ui_search .input_search {
+    float: left;
+    padding: 6px 40px 6px 6px;
+}
+.ui_search .input_search {
+    float: left;
+}
+.ui_search .submit {
+    background: rgba(0, 0, 0, 0) url("../images/icons/icon_search.png") no-repeat scroll 0 0;
+    border: 0 none;
+    cursor: pointer;
+    height: 17px;
+    margin: 6px 0 0 -24px;
+    width: 17px;
+}
+.ui_table .form_cent {
+    padding: 0;
+}
+.ui_form .form_cent_label {
+    margin: 0;
+}
+.form_cent {
+    background: #fff url("../images/common/table/table_td.gif") repeat-y scroll left top;
+}
+.form_pic {
+    text-align: center;
+    vertical-align: middle;
+}
+.form_pic img {
+    border: 1px solid #eee;
+    padding: 3px;
+}
+.form_cent_label {
+    float: left;
+    font-weight: bold;
+    padding: 12px 8px 8px;
+    width: 80px;
+}
+.form_cent_input {
+    margin-left: 90px;
+    padding: 8px;
+}
+.ui_form_group {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.ui_form_group table {
+    width: 100%;
+}
+.ui_form_group legend {
+    background: rgba(0, 0, 0, 0) url("../images/icons/arrow.png") no-repeat scroll right 5px;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0 20px 0 5px;
+}
+.ui_form_group_open table {
+    display: none;
+}
+.ui_form_group_open legend {
+    background-position: right -25px;
+}
+.ui_form_group .form_cent {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+.ui_form_group .form_cent_label {
+    text-align: right;
+}
+.ui_form_group .form_cent_text {
+    border-bottom: 1px solid #eee;
+    margin-left: 90px;
+    padding: 12px 8px 4px;
+}

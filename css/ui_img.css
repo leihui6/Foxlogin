@@ -1,0 +1,46 @@
+
+.img_border {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #d8d8d8;
+    padding: 0;
+}
+a .img_border:hover {
+    border: 4px solid #f08800;
+    padding: 0;
+}
+.img_transparent {
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+    width: 160px;
+}
+.img_transparent .shadow {
+    background-color: #000;
+    bottom: 0;
+    display: block;
+    height: 27px;
+    left: 0;
+    line-height: 27px;
+    opacity: 0.5;
+    position: absolute;
+    width: 160px;
+    z-index: 1;
+}
+.img_transparent .name {
+    bottom: 0;
+    color: #fff;
+    left: 0;
+    margin: 0 0 5px 10px;
+    position: absolute;
+    z-index: 2;
+}
+.img_transparent .name a {
+    color: #fff;
+    text-decoration: none;
+}
+.img_circle {
+    border-radius: 50%;
+}
+.img_rounded {
+    border-radius: 6px;
+}

@@ -1,0 +1,38 @@
+
+.ui_filter {
+}
+.ui_filter span {
+    color: #333;
+    display: block;
+    float: left;
+    font-size: 13px;
+    margin: 5px 0 0 5px;
+    width: 100px;
+}
+.ui_filter .ui_list_h {
+    display: block;
+    margin-left: 100px;
+}
+.ui_filter .ui_list_h li {
+    margin: 0 10px 5px 0;
+    white-space: nowrap;
+}
+.ui_filter .ui_list_h li a {
+    display: block;
+    font-size: 13px;
+    padding: 2px 5px;
+    text-decoration: none;
+}
+.ui_filter .ui_list_h li a:hover {
+    background: #ff6600 none repeat scroll 0 0;
+    color: #fff;
+}
+.ui_filter .ui_list_h li a.active {
+    background: #ff6600 none repeat scroll 0 0;
+    color: #fff;
+}
+.ui_filter .ui_btn {
+}
+.ui_table .ui_filter {
+    margin-top: 5px;
+}

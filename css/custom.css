@@ -1,0 +1,29 @@
+select{
+	padding: 2px 2px 2px 0px ;
+}
+input{
+	padding: 0px 0px;
+}
+input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+padding: 0px 0px;
+
+}
+.ui_form_actions{
+	 padding-left: 0px;text-align: center;
+}
+
+.ui_pagination ul li a, 
+.ui_pagination ul li span {
+	 line-height: 26px;
+}
+
+.ui_table_style02 td{
+	height: 38px;
+	line-height: 25px;
+}
+
+.ui_table_style02 th{
+	height: 32px;
+	line-height: 32px;
+	background: url(./cssImage/proc-bg.jpg) repeat-x;
+}

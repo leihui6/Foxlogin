@@ -1,0 +1,149 @@
+
+.ui_list {
+    width: 100%;
+}
+.ui_list li {
+    border-bottom: 1px solid #eee;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 26px;
+    overflow: hidden;
+    padding: 2px 0;
+    width: 100%;
+}
+.ui_list li a {
+    color: #3163b6;
+    cursor: pointer;
+    float: left;
+    font-size: 13px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.ui_list li a:hover {
+    color: #cd0200;
+    text-decoration: underline;
+}
+.ui_list li .pull_right {
+    float: right;
+}
+.ui_list li .pull_left {
+    float: left;
+}
+.ui_list li .number {
+    background: #ff7e00 none repeat scroll 0 0;
+    border-radius: 2px;
+    color: #fff;
+    display: block;
+    float: left;
+    font-size: 10px;
+    font-weight: bold;
+    height: 12px;
+    line-height: 12px;
+    padding: 0 2px;
+    text-align: center;
+    z-index: 10;
+}
+.ico_img li, .ico_phone li, .ico_mail li, .ico_spot li, .ico_rank {
+    background-image: url("../images/icons/list_type_ico.gif");
+    background-repeat: no-repeat;
+}
+.ico_phone li {
+    background-position: left -22px;
+}
+.ico_spot li {
+    background-position: left -47px;
+}
+.ico_mail li {
+    background-position: left 10px;
+}
+.ico_img li {
+    background-position: left -74px;
+}
+.ico_rank {
+    background-position: 2px -265px;
+}
+.ico_spot li a, .ico_phone li a {
+    padding-left: 15px;
+}
+.ico_img li a, .ico_mail li a {
+    padding-left: 20px;
+}
+.ico_rank li a {
+    padding-left: 30px;
+}
+.item_inner {
+    float: left;
+}
+.item_inner li {
+    height: auto;
+}
+.item_inner a {
+    float: none !important;
+}
+.item_inner p {
+    color: #888;
+    display: block;
+    font-size: 12px !important;
+    margin-bottom: 0 !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 300px;
+}
+.item_mix_h .img, .item_mix_h .text {
+    float: left;
+}
+.item_mix_h .text {
+    margin-left: 7px;
+    width: 300px;
+}
+.item_mix_h h3 {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.item_mix_h p {
+    color: #666;
+    font-size: 12px !important;
+    line-height: 18px !important;
+}
+.item_mix_v .img, .item_mix_v .text {
+}
+.item_mix_v .text {
+}
+.item_mix_v h3 {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.item_mix_v p {
+    color: #666;
+    font-size: 12px !important;
+}
+.ui_list_h {
+    display: inline-block;
+}
+.ui_list_h li {
+    display: inline;
+    float: left;
+    margin: 7px 7px 5px;
+    text-align: center;
+}
+.ui_list_h li a {
+    color: #3163b6;
+    cursor: pointer;
+}
+.ui_list_h span {
+    cursor: pointer;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    white-space: nowrap;
+}

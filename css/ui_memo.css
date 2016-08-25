@@ -1,0 +1,22 @@
+
+.ui_memo {
+    background: #fcfdc4 url("../../skin/images/bulletin_bg.gif") no-repeat scroll left bottom;
+    width: 270px;
+}
+.ui_memo h2 {
+    background: #fcfdc4 none repeat scroll 0 0 !important;
+    color: #555 !important;
+    padding-left: 5px;
+    position: relative;
+}
+.ui_memo ul {
+    padding-bottom: 20px;
+}
+.ui_memo li {
+    line-height: 25px;
+    padding: 10px;
+}
+.ui_memo h2 .opt {
+    position: absolute;
+    right: 5px;
+}

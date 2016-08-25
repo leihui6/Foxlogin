@@ -1,0 +1,76 @@
+
+.ui_progress {
+    background-color: #ddd;
+    background-image: linear-gradient(to bottom, #ddd, #f9f9f9);
+    background-repeat: repeat-x;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+    height: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.ui_progress .bar {
+    background-color: #0e90d2;
+    background-image: linear-gradient(to bottom, #149bdf, #0480be);
+    background-repeat: repeat-x;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15) inset;
+    box-sizing: border-box;
+    color: #ffffff;
+    float: left;
+    font-size: 12px;
+    height: 100%;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    transition: width 0.6s ease 0s;
+    width: 0;
+}
+.ui_progress .bar + .bar {
+    box-shadow: 1px 0 0 rgba(0, 0, 0, 0.15) inset, 0 -1px 0 rgba(0, 0, 0, 0.15) inset;
+}
+.ui_progress_striped .bar {
+    background-color: #149bdf;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+}
+.ui_progress_active .bar {
+    animation: 2s linear 0s normal none infinite running ui_progress_bar_stripes;
+}
+.ui_progress_danger .bar, .ui_progress .bar_danger {
+    background-color: #dd514c;
+    background-image: linear-gradient(to bottom, #ee5f5b, #c43c35);
+    background-repeat: repeat-x;
+}
+.ui_progress_danger .ui_progress_striped .bar, .ui_progress_striped .bar_danger {
+    background-color: #ee5f5b;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+.ui_progress_success .bar, .ui_progress .bar_success {
+    background-color: #5eb95e;
+    background-image: linear-gradient(to bottom, #62c462, #57a957);
+    background-repeat: repeat-x;
+}
+.ui_progress_success .ui_progress_striped .bar, .ui_progress_striped .bar_success {
+    background-color: #62c462;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+.ui_progress_info .bar, .ui_progress .bar_info {
+    background-color: #4bb1cf;
+    background-image: linear-gradient(to bottom, #5bc0de, #339bb9);
+    background-repeat: repeat-x;
+}
+.ui_progress_info .ui_progress_striped .bar, .ui_progress_striped .bar_info {
+    background-color: #5bc0de;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+.ui_progress_warning .bar, .ui_progress .bar_warning {
+    background-color: #faa732;
+    background-image: linear-gradient(to bottom, #fbb450, #f89406);
+    background-repeat: repeat-x;
+}
+.ui_progress_warning .ui_progress_striped .bar, .ui_progress_striped .bar_warning {
+    background-color: #fbb450;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+.ui_table .ui_progress {
+    margin-bottom: 0;
+}

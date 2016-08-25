@@ -1,0 +1,68 @@
+
+.ui_select {
+    border: 1px solid #ddd;
+    padding: 0 10px;
+}
+.ui_select li {
+    border-bottom: 1px dashed #eee;
+    line-height: 24px;
+    padding: 10px 0 10px 100px;
+}
+.ui_select li dl {
+}
+.ui_select li dl::after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+.ui_select li dl {
+    position: relative;
+}
+.ui_select .ui_select_result {
+    border-bottom: medium none;
+}
+.ui_select dt {
+    color: #666;
+    left: -100px;
+    margin: 5px 0;
+    position: absolute;
+    text-align: right;
+    top: 0;
+    width: 100px;
+}
+.ui_select dd {
+    display: inline;
+    float: left;
+    margin: 5px;
+}
+.ui_select a {
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 5px;
+}
+.ui_select a:hover {
+    background-color: #ffe8d9;
+    color: #f60;
+    text-decoration: none;
+}
+.ui_select .selected a, .ui_select .selected a:hover {
+    background-color: #f60;
+    color: #fff;
+}
+.ui_select .ui_select_result dt {
+    font-weight: bold;
+}
+.ui_select .ui_select_result a {
+    background: #f60 url("../images/common/select/close.gif") no-repeat scroll right -11px;
+    color: #fff;
+    padding-right: 20px;
+}
+.ui_select .ui_select_result a:hover {
+    background-position: right 8px;
+}
+.no_select {
+    color: #999;
+}

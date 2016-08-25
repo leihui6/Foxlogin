@@ -1,0 +1,87 @@
+
+.ui_thumbnails {
+    margin-right: -5px;
+}
+.ui_thumbnails::after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 1px;
+    overflow: hidden;
+}
+.ui_thumbnails li {
+    display: inline;
+    float: left;
+    margin-bottom: 10px;
+}
+.ui_thumbnails img {
+    border: 1px solid #eee;
+    border-radius: 4px;
+    display: block;
+    margin: 0 0 0 10px;
+    padding: 3px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out 0s;
+}
+.ui_thumbnails a:hover img {
+    border: 1px solid #ccc;
+    text-decoration: none;
+}
+.ui_thumbnail_img {
+    display: table;
+}
+.ui_thumbnail_img a {
+    border: 1px solid #eee;
+    border-radius: 4px;
+    display: table-cell;
+    padding: 3px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out 0s;
+    vertical-align: middle;
+}
+.ui_thumbnail_img a:hover {
+    border: 1px solid #ccc;
+    text-decoration: none;
+}
+.ui_thumbnail_img a img, .ui_thumbnail_img a:hover img {
+    border: medium none;
+    border-radius: 0;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+.ui_thumbnails h3 {
+    color: #666;
+    font: bold 12px/2 "microsoft yahei";
+    height: 24px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 10px 0 7px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: keep-all;
+}
+.ui_thumbnails h3 a {
+    color: #666;
+    text-decoration: none;
+}
+.ui_thumbnails h3 a:hover {
+    color: #f60;
+}
+.ui_thumbnails p {
+    color: #666;
+    font: 12px/18px "simsun";
+    height: 54px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 10px 0 7px;
+}
+.ui_thumbnails p a {
+    color: #444;
+}
+.ui_thumbnails p a:hover {
+    color: #f60;
+}

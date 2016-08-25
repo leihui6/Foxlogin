@@ -1,0 +1,114 @@
+
+.ui_box_wapper {
+    overflow: hidden;
+    position: relative;
+}
+.ui_box {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #ebebeb;
+    position: relative;
+    z-index: 1;
+}
+.ui_box_background {
+    background: rgba(0, 0, 0, 0) url("../images/common/box/ui_box_bg.png") no-repeat scroll right bottom;
+    height: 100%;
+    left: 3px;
+    padding: 0 1px 3px 0;
+    position: absolute;
+    top: 1px;
+    width: 100%;
+    z-index: -999;
+}
+.ui_box .hd {
+    background: rgba(0, 0, 0, 0) url("../images/icons/ui_box_header_bg.gif") repeat-x scroll center bottom;
+    border-radius: 5px 5px 0 0;
+    display: inline-block;
+    width: 100%;
+}
+.ui_box .hd span {
+    line-height: 30px;
+    margin-right: 5px;
+}
+.ui_box .hd span a {
+    color: #777;
+    font-size: 13px;
+}
+.ui_box h3 {
+    color: #777;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 30px;
+    margin: 0;
+    padding-left: 8px;
+}
+.ui_box h3 a {
+    color: #555;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+}
+.ui_box .bd {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 0 0 5px 5px;
+    padding: 8px;
+    position: relative;
+    z-index: 1;
+}
+.ui_box_style03_wapper {
+    overflow: hidden;
+    position: relative;
+}
+.ui_box_style03 {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #c4c4c4;
+    box-shadow: 2px 2px 2px #eaeaea;
+    min-height: 240px;
+    position: relative;
+    z-index: 1;
+}
+.ui_box_style03_background {
+    background: rgba(0, 0, 0, 0) url("../images/common/box/ui_box_bg.png") no-repeat scroll right bottom;
+    height: 100%;
+    left: 3px;
+    padding: 0 1px 3px 0;
+    position: absolute;
+    top: 1px;
+    width: 100%;
+    z-index: -999;
+}
+.ui_box_style03 .hd {
+    background: rgba(0, 0, 0, 0) url("../images/common/box/ui_box_header_bg.gif") repeat-x scroll center bottom;
+    display: inline-block;
+    height: 27px;
+    width: 100%;
+}
+.ui_box_style03 .hd span {
+    line-height: 27px;
+    margin-right: 5px;
+}
+.ui_box_style03 .hd span a {
+    color: #777;
+    font-size: 13px;
+}
+.ui_box_style03 h3 {
+    color: #777;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 27px;
+    margin: 0;
+    padding-left: 8px;
+}
+.ui_box_style03 h3 a {
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.ui_box_style03 .bd {
+    background: #fff none repeat scroll 0 0;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}

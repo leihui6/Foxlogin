@@ -1,0 +1,135 @@
+
+.ui_alert {
+    background-color: #fcf8e3;
+    border: 1px solid #fbeed5;
+    border-radius: 4px;
+    color: #c09853;
+    margin-bottom: 18px;
+    padding: 8px 35px 8px 14px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    word-wrap: break-word;
+}
+.ui_alert p {
+    font-size: 12px !important;
+}
+.ui_alert_heading {
+    color: inherit;
+}
+.ui_alert .close {
+    line-height: 18px;
+    position: relative;
+    right: -21px;
+    top: -2px;
+}
+.ui_alert_success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+}
+.ui_alert_danger, .ui_alert_error {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+}
+.ui_alert_info {
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    color: #3a87ad;
+}
+.ui_alert_block {
+    padding-bottom: 14px;
+    padding-top: 14px;
+}
+.ui_alert_block > p, .ui_alert_block > ul {
+    margin-bottom: 0;
+}
+.ui_alert_block p + p {
+    margin-top: 5px;
+}
+.close {
+    color: #000000;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    opacity: 0.2;
+    text-shadow: 0 1px 0 #fff;
+}
+.close:hover {
+    color: #000000;
+    cursor: pointer;
+    opacity: 0.4;
+    text-decoration: none;
+}
+button.close {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    cursor: pointer;
+    padding: 0;
+}
+.ui_message {
+    background: rgba(0, 0, 0, 0) url("../images/common/alert/message_bg_left.gif") no-repeat scroll left bottom;
+    height: 64px;
+    margin-right: 20px;
+    position: relative;
+    width: 270px;
+}
+.ui_message .right_bg {
+    background: rgba(0, 0, 0, 0) url("../images/common/alert/message_bg_right.gif") no-repeat scroll right bottom;
+    display: block;
+    height: 64px;
+    line-height: 64px;
+    position: absolute;
+    right: -2px;
+    top: 0;
+    width: 2px;
+}
+.ui_message .message_title {
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+}
+.ui_message p {
+    color: #303030;
+    font-size: 12px;
+}
+.ui_message p b {
+    color: red;
+    font-family: "tahoma";
+    margin: 0 1px;
+}
+.ui_message a, .ui_message a:link {
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+.ui_message p {
+    height: 18px;
+    line-height: 18px;
+}
+.ui_message .message_close {
+    background: rgba(0, 0, 0, 0) url("../images/common/alert/message_close.gif") no-repeat scroll 0 0;
+    cursor: pointer;
+    display: block;
+    height: 8px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 9px;
+}
+.ui_message .message_close:hover {
+    opacity: 0.6;
+}
+.ui_message .timer {
+    bottom: 5px;
+    color: #777;
+    position: absolute;
+    right: 5px;
+}
+.ui_message .timer .show_time {
+    color: #ff0000;
+}

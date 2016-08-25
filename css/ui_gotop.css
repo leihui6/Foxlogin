@@ -1,0 +1,39 @@
+
+.ui_gotop {
+    background: #eee url("../images/icons/ui_gotop.gif") no-repeat scroll center center;
+    border: 1px solid #dcdcdc;
+    border-radius: 2px;
+    bottom: 10px;
+    display: block;
+    height: 40px;
+    position: fixed;
+    right: 10px;
+    text-decoration: none;
+    width: 40px;
+}
+.ui_gotop_txt {
+    background-color: #eee;
+    border: 1px solid #dcdcdc;
+    border-radius: 2px;
+    bottom: 10px;
+    color: #333;
+    display: block;
+    line-height: 110%;
+    padding: 2px 0 5px;
+    position: fixed;
+    right: 10px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #fff;
+    width: 20px;
+}
+.ui_gotop_txt i {
+    margin-right: 0;
+}
+.ui_gotop:hover, .ui_gotop_txt:hover {
+    background-color: #f4f4f4;
+    text-decoration: none;
+}
+#goTop {
+    display: none;
+}

@@ -1,0 +1,111 @@
+
+.ui_label, .ui_badge {
+    background-color: #999;
+    color: #fff;
+    font-size: 12px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    vertical-align: baseline;
+    white-space: nowrap;
+}
+.ui_label {
+    border-radius: 3px;
+    padding: 2px 4px 1px;
+}
+.ui_badge {
+    border-radius: 9px;
+    padding: 1px 9px 2px;
+}
+a.ui_label:hover, a.ui_badge:hover {
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+.ui_label_important, .ui_badge_important, .ui_label_red {
+    background-color: #b94a48;
+}
+.ui_label_important[href], .ui_badge_important[href] {
+    background-color: #953b39;
+}
+.ui_label_warning, .ui_badge_warning, .ui_label_yellow {
+    background-color: #f89406;
+}
+.ui_label_warning[href], .ui_badge_warning[href] {
+    background-color: #c67605;
+}
+.ui_label_success, .ui_badge_success, .ui_label_green {
+    background-color: #468847;
+}
+.ui_label_success[href], .ui_badge_success[href] {
+    background-color: #356635;
+}
+.ui_label_info, .ui_badge_info, .ui_label_blue {
+    background-color: #3a87ad;
+}
+.ui_label_info[href], .ui_badge_info[href] {
+    background-color: #2d6987;
+}
+.ui_label_inverse, .ui_badge_inverse, .ui_badge_black {
+    background-color: #333;
+}
+.ui_label_inverse[href], .ui_badge_inverse[href] {
+    background-color: #1a1a1a;
+}
+.ui_btn .ui_label, .ui_btn .ui_badge {
+    position: relative;
+    top: -1px;
+}
+.ui_btn_mini .ui_label, .ui_btn_mini .ui_badge {
+    top: 0;
+}
+.ui_list .ui_badge, .ui_list .ui_label {
+    float: left;
+    line-height: 18px;
+    margin-left: 3px;
+    margin-top: 3px;
+}
+.ui_tag a:link, .ui_tag a:visited {
+    background: #f8f8f8 none repeat scroll 0 0;
+    border: 1px solid #d5d5d5;
+    border-radius: 5px;
+    color: #000;
+    display: block;
+    font-size: 12px;
+    padding: 0 10px;
+    white-space: nowrap;
+}
+.ui_tag a:hover {
+    background: #0088cc none repeat scroll 0 0;
+    border: 1px solid #0088cc;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+}
+.ui_tag_style01 {
+    background: rgba(0, 0, 0, 0) url("../images/common/tag/tag_bg.png") no-repeat scroll 0 0;
+    border-right: 1px solid #0088cc;
+    max-width: 500px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ui_tag_style01 a:hover {
+    text-decoration: none;
+}
+.ui_tag_style01 a:link, .ui_tag_style01 a:visited {
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 23px;
+    max-width: 450px;
+    overflow: hidden;
+    padding-left: 2px;
+    padding-right: 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ui_tag_style01 a:hover {
+    color: #fff;
+}
+.ui_tag_style01:hover {
+    background: rgba(0, 0, 0, 0) url("../images/common/tag/tag_bg_over.png") no-repeat scroll 0 0;
+}
