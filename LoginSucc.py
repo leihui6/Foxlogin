@@ -81,6 +81,7 @@ def loginSucc():
         t_myInfo = threading.Thread(target=thread_myInfo, args=(folderName, menuDict), name='thread_myInfo')
         t_myInfo.start()
     # 发送邮件
+    # 为维护个人信息 请谨慎使用
     send_email = False
     if send_email:
         t_myTest = threading.Thread(target=thread_send_email, name='send_email')
