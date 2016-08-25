@@ -12,7 +12,7 @@ Required module:
 You could download them by using 'pip install xxx' .
 
 Then,We use the pyinstaller to package our project , 
-which command is 'pyinstaller -F -w -c code_icon.ico Main.py' .
+which command is 'pyinstaller -Fw -D -i code_icon.ico Main.py' .
 
 
 If you hava any questions you can connect us ! (2016/8/25)
