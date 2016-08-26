@@ -115,5 +115,5 @@ def getBackGround () :
     soup = BeautifulSoup(html, 'html.parser')
     url = soup.find('img').get('src')
     # 尝试下载每日图片
-    urllib.request.urlretrieve(url, 'bing_background(%s).jpg'%globalVal.today)
+    urllib.request.urlretrieve(url, './background/bing_bg(%s).jpg'%globalVal.today)
     globalVal.saveTolog("获取必应每日图片完成")

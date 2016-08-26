@@ -21,7 +21,7 @@ def modify_timeTable(html):
 
     # 修改网页的背景图片
     bg = soup.body
-    bg['background'] = "../../bing_background(%s).jpg"%globalVal.today
+    bg['background'] = "../../background/bing_bg(%s).jpg"%globalVal.today
 
     # 改变中间内容的透明度
     divBody = soup.find_all("div", {'class': 'tableGroup otherInfo'})
@@ -58,7 +58,7 @@ def modify_myScore(html):
 
     # 修改网页的背景图片
     bg = soup.body
-    bg['background'] = "../../bing_background(%s).jpg"%globalVal.today
+    bg['background'] = "../../background/bing_bg(%s).jpg"%globalVal.today
 
     # 修改网页抬头
     html_title = soup.title
@@ -119,7 +119,7 @@ def modify_myTest(html):
 
     # 修改网页的背景图片
     bg = soup.body
-    bg['background'] = "../../bing_background(%s).jpg"%globalVal.today
+    bg['background'] = "../../background/bing_bg(%s).jpg"%globalVal.today
 
     # 改变中间内容的透明度
     divBody = soup.find_all("div", {'class': 'div_body'})

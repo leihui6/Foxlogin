@@ -609,7 +609,8 @@ def preLoad():
             globalVal.check_remmber_pwd = True
     globalVal.shelveFile.close()
     pass
-
+    if not os.path.exists('background'):
+        os.mkdir('background')
     thread_getBackGround = threading.Thread(target=SimuLogin_.getBackGround, name='getBackGround')
     thread_getBackGround.start()
 
