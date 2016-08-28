@@ -1,4 +1,4 @@
-
+If you want to use the exe file.You can download it from "https://yunpan.cn/cMqRsqXNIIPVV (Code:1c96)"
 
 This's a last release version,
 But I can tell you how to run this project after installing required module.
