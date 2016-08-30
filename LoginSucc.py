@@ -144,7 +144,7 @@ def thread_send_email():
         subject = globalVal.username
         smtpserver = 'smtp.163.com'
         username = 'find_by_u@163.com'
-        password = 'wkmllh666'
+        password = '******'
 
         msg = MIMEMultipart()
         msg['Subject'] = subject
