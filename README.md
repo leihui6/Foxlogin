@@ -5,12 +5,12 @@ We optimized those page so that they appear more quickly.</br>
 If you want to use the exe file.You can download it from "https://yunpan.cn/cMqRsqXNIIPVV (Code:1c96)" , </br>
 which's a last release version.</br>
 
-####Platform:
-	python 3.5.2
+###Platform:
+	*python 3.5.2
 	
-####Required module:
-    	Pillow
-	BeautifulSoup4
+###Required module:
+	*Pillow
+	*BeautifulSoup4
 
 </br>
 
