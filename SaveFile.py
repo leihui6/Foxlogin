@@ -1,49 +1,46 @@
-# coding=utf-8
-# SaveFile.py
-# 保存文件
+# -*- coding: UTF-8 -*-
+'''
+    模块名称:SaveFile
+    功能:保存html页面,保存逻辑控制
+    时间:2017-02-06
+    作者:ptsph@foxmail.com
+'''
 import os
-import globalVal
-import urllib.request
+import GlobalVal
 
-import urllib.parse
+class SaveHtml:
+    '''
+        保存原则:
+        相对路径为"学号/学期/文件名.html"
+        - 初始化获取学号
+        - 根据需要获取学期
+        - 文件名在函数内部赋予
 
-def saveHtml(htmlFile,fileName):
-    # 保存的原则是'学好/学期/html文件'
-    # print  (fileName)
-    # 将 复选框内容转为学期(汉字)
-    word = globalVal.year2easyRead(fileName[3:14])
+    '''
+    save_path =''
 
-    # 获取文件夹路径 '学好/学期'
-    folderName = './' + globalVal.username + '/'+word
+    def __init__(self):
+        self.save_path = './' + GlobalVal.username
+        if os.path.exists(self.save_path) == False:
+            os.makedirs(self.save_path)
 
-    # 将文件名中的学期转为汉字
-    fileName = fileName[:3] + word + fileName[14:]
+    def save_as_score(self,html):
+        last_dirnmae = GlobalVal.year2easyRead(GlobalVal.check_myscore_val)
+        if os.path.exists(self.save_path +'\\'+last_dirnmae) == False:
+            os.makedirs(self.save_path +'\\'+last_dirnmae)
+        fileName='我在%s的成绩.html'%last_dirnmae
+        open(self.save_path +'\\'+last_dirnmae+'\\' + fileName,'wb+').write(html.encode())
 
-    globalVal.saveTolog(fileName + "已保存在\""+folderName+"/\"下")
+    def save_as_timetable(self,html):
+        last_dirnmae = GlobalVal.year2easyRead(GlobalVal.check_timetable_val)
+        if os.path.exists(self.save_path +'\\'+last_dirnmae) == False:
+            os.makedirs(self.save_path +'\\'+last_dirnmae)
+        fileName='我在%s的课表.html'%last_dirnmae
+        open(self.save_path +'\\'+last_dirnmae+'\\' + fileName,'wb+').write(html.encode())
 
-    # 检查是否存在文件夹
-    if os.path.exists(folderName):
-        file = open(folderName + "/"+ fileName, 'wb+')
-
-        file.write(htmlFile.encode('utf-8'))
-
-        file.close()
-    else:
-        os.makedirs(folderName)
-
-        file = open(folderName + "/" + fileName, 'wb+')
-
-        file.write(htmlFile.encode('utf-8'))
-
-        file.close()
-
-# 获取html中的img链接
-def savePhoto(folderName,username):
-    if os.path.exists(folderName):
-        imgUrl = "http://ssfw.tjut.edu.cn/ssfw/photo.widgets?handler=photo1Handler&value=&bh=%s" % username
-        urllib.request.urlretrieve(imgUrl, folderName + "/photo.jpg")
-
-    else:
-        os.mkdir(folderName)
-        imgUrl = "http://ssfw.tjut.edu.cn/ssfw/photo.widgets?handler=photo1Handler&value=&bh=%s" % username
-        urllib.request.urlretrieve(imgUrl, folderName + "/photo.jpg")
+    def save_as_exam(self,html):
+        last_dirnmae = GlobalVal.year2easyRead(GlobalVal.check_exam_val)
+        if os.path.exists(self.save_path +'\\'+last_dirnmae) == False:
+            os.makedirs(self.save_path +'\\'+last_dirnmae)
+        fileName='我在%s的考试安排.html'%last_dirnmae
+        open(self.save_path +'\\'+last_dirnmae+'\\' + fileName,'wb+').write(html.encode())
