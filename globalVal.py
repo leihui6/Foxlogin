@@ -1,46 +1,31 @@
-# coding=utf-8
-import time
+# -*- coding: UTF-8 -*-
+'''
+    模块名称:GlobalVal
+    功能:保存程序运行中所需要的变量/函数
+    时间:2017-02-06
+    作者:ptsph@foxmail.com
+'''
 from tkinter import *
 # 验证码控件 避免局部变量被删除
 global left_image
 global mid_widget
 global right_image
-
 # 日志模块
-global shelveFile
-global logFile
-# 登录的反馈信息
-global loginflag
-
-# 实际获取到的数据量
-global getCount
-# 期望获取到的数据量
-global wantCount
-
-# cmd 中开启了子进程 数据共享使用
-global tasklist
-
+global record_file
 # 窗口控件 以便设置窗口参数
 global root
-
 # 验证码控件 设置为全局避免被函数[析构(c++)]
 global image_label
 global ocrCode_image
-
 # 登录数据
 global secretCode
 global username
 global password
-global opener
-
-# 是否获取到了验证码
-global getSecretCodeed
-
 # 用户的选择  选中是True 否则是False
 global check_timetable
 global check_myscore
-global check_test
-global check_remmber_pwd
+global check_exam
+global is_remember_pwd
 # 默认选择框
 global variable0
 global variable1
@@ -48,19 +33,20 @@ global variable2
 # 手动选择框
 global check_timetable_val
 global check_myscore_val
-global check_test_val
-
-global today
+global check_exam_val
+global foxlogin_version
+global spider
 
 # 将信息显示在窗口中的text控件
 def showInText(showText):
     root.text['state'] = NORMAL
-    root.text.insert(END, '>'+showText+"\n")
+    root.text.insert(END, '>>'+showText+"\n")
     root.text.update()
     root.text['state'] = DISABLED
     root.text.see(END)
     pass
 
+# 清除显示框中的数据
 def clearShowInText():
     root.text['state'] = NORMAL
     root.text.delete('0.0', END)
@@ -68,16 +54,9 @@ def clearShowInText():
     root.text['state'] = DISABLED
     pass
 
-def saveTolog(text):
-    operateTime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-    logFile.write(operateTime+" # "+str(text)+'\n')
-    logFile.flush()
-    pass
-
 def year2easyRead(termYear):
     termYear = termYear.split('-')
     return '大'+year2Word(int(termYear[1])- int(username[0:4]))+ ' 第'+year2Word(int(termYear[2]))+'学期'
-
 
 def easyRead2Year(termYear):
     start = int(username[0:4]) + year2Word(termYear[1]) - 1
@@ -94,7 +73,6 @@ def year2Word(year):
         return '三'
     elif year == 4:
         return '四'
-
     if year == '一':
         return 1
     elif year == '二':
