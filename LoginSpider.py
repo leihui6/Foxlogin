@@ -47,14 +47,15 @@ class Spider:
     def get_valid_code(self):
         valid_code_url_tmp = self.valid_code_url + str(random.randint(0,100))
         try:
-            picture = self.__session.get(valid_code_url_tmp)
+            picture = self.__session.get(valid_code_url_tmp,headers=self.header)
         except:
             GlobalVal.showInText('error:network disconnect')
         else:
             if picture.status_code == 200:
                 open('image/img.jpg', 'wb').write(picture.content)
             else:
-                print('error:获取验证码失败')
+                # print('error:获取验证码失败')
+                GlobalVal.showInText('error:获取验证码失败')
 
     def login(self):
         login_params = {
