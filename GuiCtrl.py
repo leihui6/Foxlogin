@@ -292,7 +292,9 @@ def errorCheck():
 # 更新验证码
 def updateOcrCodeShow(event):
     GlobalVal.spider = LoginSpider.Spider()
-    GlobalVal.spider.get_valid_code()
+    get_result = GlobalVal.spider.get_valid_code()
+    if get_result == False:
+        return
     image_file = Image.open('image/img.jpg')
     GlobalVal.ocrCode_image = ImageTk.PhotoImage(image_file)
     GlobalVal.image_label['image'] = GlobalVal.ocrCode_image
@@ -314,7 +316,6 @@ def updateToShelve():
         if GlobalVal.username in GlobalVal.record_file.keys():
             GlobalVal.record_file[GlobalVal.username]['is_remember_pwd'] = True
             GlobalVal.record_file[GlobalVal.username]['user_password'] = GlobalVal.password
-            print('保存本地数据,更新为确认保存数据')
         # 本地存在用户数据需要创建用户数据
         else:
             need_update_info = {}
@@ -325,11 +326,11 @@ def updateToShelve():
 
     # 写回到硬盘
     GlobalVal.record_file.sync()
-    print('写回至数据库')
     return
 
 # 开始进入登录流程
 def launch():
+    '''
     print("学　号:", GlobalVal.username)
     print("密　码:", GlobalVal.password)
     print("验证码:", GlobalVal.secretCode)
@@ -337,7 +338,7 @@ def launch():
     print("我的课表:", GlobalVal.check_timetable_val, '状态:', GlobalVal.check_timetable)
     print("我的成绩:", GlobalVal.check_myscore_val, '状态:', GlobalVal.check_myscore)
     print("考试安排:", GlobalVal.check_exam_val, '状态:', GlobalVal.check_exam)
-
+	'''
     start_time = clock()
 
     thread_timetable = ''

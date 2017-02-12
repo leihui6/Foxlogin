@@ -47,15 +47,30 @@ class Spider:
     def get_valid_code(self):
         valid_code_url_tmp = self.valid_code_url + str(random.randint(0,100))
         try:
-            picture = self.__session.get(valid_code_url_tmp,headers=self.header)
-        except:
-            GlobalVal.showInText('error:network disconnect')
-        else:
-            if picture.status_code == 200:
-                open('image/img.jpg', 'wb').write(picture.content)
-            else:
-                # print('error:获取验证码失败')
-                GlobalVal.showInText('error:获取验证码失败')
+            picture = self.__session.get(valid_code_url_tmp,headers=self.header,timeout=12)
+            open('image/img.jpg', 'wb').write(picture.content)
+            return True
+        # DNS failure, refused connection, etc
+        except ConnectionError :
+            GlobalVal.showInText('error:network disconnect.')
+            return False
+        # Timeout
+        except TimeoutError:
+            GlobalVal.showInText('error:time out(>12s).')
+            return False
+        # HTTPError
+        except requests.HTTPError:
+            GlobalVal.showInText('error:http requests.')
+            return False
+        # File write or read
+        except IOError:
+            GlobalVal.showInText('error:get.read or file.read')
+            return False
+        # Dont know what is happened.
+        except :
+            GlobalVal.showInText('error:network disconnect.')
+            return False
+
 
     def login(self):
         login_params = {
@@ -63,11 +78,25 @@ class Spider:
             'j_password': GlobalVal.password,
             'validateCode': GlobalVal.secretCode
         }
-        login_result = self.__session.post(self.home_url, data=login_params, headers=self.header)
+        login_result = ''
+        try:
+            login_result = self.__session.post(self.home_url, data=login_params, headers=self.header,timeout=6)
+        # DNS failure, refused connection, etc
+        except ConnectionError :
+            return False,'error:ConnectionError.'
+        # Timeout
+        except TimeoutError:
+            return False, 'error:TimeoutError.'
+        # HTTPError
+        except requests.HTTPError:
+            return False, 'error:HTTPError:%s.'%login_result.status_code
+        except :
+            return False,'error:network disconnect.'
+        # Almost everything is ok.
         if 'success' in login_result.json():
-            return True,login_result.json()
+            return True, login_result.json()
         else:
-            return False,login_result.json()
+            return False, login_result.json()
 
     def get_my_score(self,score_params):
         score_params_post = {
@@ -81,23 +110,29 @@ class Spider:
             'qXndm_ys': score_params[0:9],
             'qXqdm_ys': score_params[-1:]
         }
-        score_back = self.__session.post(self.socre_url, data=score_params_post, headers=self.header)
-        return score_back.text.encode()
+        try:
+            score_back = self.__session.post(self.socre_url, data=score_params_post, headers=self.header)
+            return score_back.text.encode()
+        except:
+            return ''
 
     def get_my_exam(self,exam_params):
         exam_params_post = {
             'xnxqdm': exam_params
         }
-        exam_back = self.__session.post(self.exam_url, data=exam_params_post, headers=self.header)
-        # open(save_path, 'wb+').write(exam_back.text.encode())
-        return exam_back.text.encode()
+        try:
+            exam_back = self.__session.post(self.exam_url, data=exam_params_post, headers=self.header)
+            return exam_back.text.encode()
+        except:
+            return ''
 
     def get_my_timetable(self,timetable_params):
         self.timetable_url += timetable_params
-        timetable_back = self.__session.get(self.timetable_url, headers=self.header)
-        #open(save_path, 'wb+').write(timetable_back.text.encode())
-        return timetable_back.text.encode()
-
+        try:
+            timetable_back = self.__session.get(self.timetable_url, headers=self.header)
+            return timetable_back.text.encode()
+        except:
+            return ''
 
 def walk_with_score():
     proc = ProcessHtml.ProcessHtml()
