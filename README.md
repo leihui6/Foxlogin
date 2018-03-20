@@ -27,7 +27,7 @@ _Foxlogin_ 是一个帮助天津理工的学生 **快速** 获取 **任意学期
 ### Dependent libraries:
 * requests (2.13.0)       % pip install requests
 * Pillow (4.0.0)          % pip install pillow
-* beautifulsoup4 (4.5.3)  % pip install besutifulsoup4
+* beautifulsoup4 (4.5.3)  % pip install beautifulsoup4
 
 ----------
 
