@@ -92,6 +92,8 @@ class Spider:
             return False, 'error:HTTPError:%s.'%login_result.status_code
         except :
             return False,'error:network disconnect.'
+        if login_result.status_code != 200:
+            return False, login_result.reason
         # Almost everything is ok.
         if 'success' in login_result.json():
             return True, login_result.json()

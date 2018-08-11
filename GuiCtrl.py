@@ -187,7 +187,7 @@ def loadLoginInfo (self):
     # 填充学号密码
     self.usernameInput.insert(0, GlobalVal.username)
     self.userpwdInput.insert(0, GlobalVal.password)
-    # 更新验证码
+    # 更新验证码，为了不影响窗孔控件显示
     updateOcrCodeShow('')
 
 # 查看结果
@@ -289,8 +289,7 @@ def errorCheck():
 
     return True
 
-# 更新验证码
-def updateOcrCodeShow(event):
+def doUpdateOcrCodeShow():
     GlobalVal.spider = LoginSpider.Spider()
     get_result = GlobalVal.spider.get_valid_code()
     if get_result == False:
@@ -299,6 +298,11 @@ def updateOcrCodeShow(event):
     GlobalVal.ocrCode_image = ImageTk.PhotoImage(image_file)
     GlobalVal.image_label['image'] = GlobalVal.ocrCode_image
     GlobalVal.image_label.pack(side=LEFT, padx='5.5')
+
+# 更新验证码
+def updateOcrCodeShow(event):
+    ocrCodeThread = threading.Thread(target=doUpdateOcrCodeShow, name='updateOcrCodeShow')
+    ocrCodeThread.start()
     return
 
 # 更新本地数据
@@ -376,7 +380,7 @@ def launch():
 
 #  提前加载  检查目录是否存在
 def preLoad():
-    GlobalVal.foxlogin_version = 'Foxlogin 2.0.2.2017'
+    GlobalVal.foxlogin_version = 'Foxlogin 2.1.2017'
     # 检查data目录是否存在 创建本地记录文件
     record_file_opened = False
     if not os.path.exists('data'):
@@ -389,7 +393,6 @@ def preLoad():
         GlobalVal.record_file[''] = user_info
     if record_file_opened == False:
         GlobalVal.record_file = shelve.open("data/user_info.dat",writeback=True)
-
     # 检查image中关键文件是否存在
     if \
             not os.path.exists('image/code_icon.ico') \

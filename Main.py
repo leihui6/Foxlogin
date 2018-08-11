@@ -25,5 +25,4 @@ if __name__ == "__main__":
     GuiCtrl.loadMiddleWidget()
     # 右边视图
     GuiCtrl.loadRightImgWidget()
-
     GlobalVal.root.mainloop()
